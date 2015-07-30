@@ -7,7 +7,7 @@
 
 ext {
     seuRoot = 'T:'
-    seuName = 'SEU as Code Archetype'
+    seuName = 'SEU as Code Template'
 }
 
 plugins {
@@ -40,6 +40,11 @@ dependencies {
     // software 'org.apache.ant:apache-ant:1.9.4'
     // software 'org.apache.maven:apache-maven:3.3.3'
     // software 'org.apache.tomcat:apache-tomcat8:8.0.24'
+    // software 'io.github.msysgit:git:1.9.5'
+    // software 'org.gradle:gradle:2.5'
+    // software 'org.groovy-lang:groovy:2.4.4'
+    // software 'org.jruby:jruby:1.7.21'
+    // software 'org.scala-lang:scala:2.11.7'
 }
 
 seuAsCode {
