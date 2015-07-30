@@ -1,0 +1,22 @@
+
+if (!hasProperty('svnUsername')) {
+	ext.svnUsername = ''
+}
+if (!hasProperty('svnPassword')) {
+	ext.svnPassword = ''
+}
+
+subversion {
+	code {
+		url codeSvnURL
+		directory file("$seuRoot/codebase/")
+		username = svnUsername
+		password = svnPassword
+	}
+	docs {
+		url docsSvnURL
+		directory file("$seuRoot/docbase/")
+		username svnUsername
+		password svnPassword
+	}
+}

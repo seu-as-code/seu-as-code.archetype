@@ -1,0 +1,22 @@
+
+if (!hasProperty('gitUsername')) {
+    ext.gitUsername = ''
+}
+if (!hasProperty('gitPassword')) {
+    ext.gitPassword = ''
+}
+
+git {
+    code {
+        url codeGitURL
+        directory file("$seuRoot/codebase/")
+        username = gitUsername
+        password = gitPassword
+    }
+    docs {
+        url docsGitURL
+        directory file("$seuRoot/docbase/")
+        username gitUsername
+        password gitPassword
+    }
+}

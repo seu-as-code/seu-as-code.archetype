@@ -1,0 +1,59 @@
+plugins {
+    id 'com.jfrog.bintray' version '1.2'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+group = 'de.qaware.seu.as.code'
+
+apply plugin: 'base'
+apply plugin: 'maven-publish'
+apply plugin: 'distribution'
+
+distributions {
+    main {
+        baseName = 'seuac-archetype'
+        contents {
+        }
+    }
+}
+
+publishing {
+    publications {
+        seaucArchetype(MavenPublication) {
+            artifact "$buildDir/distributions/seuac-archetype-${project.version}.zip"
+        }
+    }
+}
+
+if (!project.hasProperty('bintrayUsername')) ext.bintrayUsername = 'unknown'
+if (!project.hasProperty('bintrayApiKey')) ext.bintrayApiKey = 'unknown'
+
+bintray {
+    user = project.bintrayUsername
+    key = project.bintrayApiKey
+    publications = ['seaucArchetype']
+    pkg {
+        repo = project.bintrayRepo
+        name = 'seuac-archetype'
+        desc = project.description
+        licenses = ['Apache-2.0']
+        labels = ['seu-as-code', 'archetype', 'template', 'quickstart']
+        websiteUrl = project.websiteUrl
+        issueTrackerUrl = project.issueTrackerUrl
+        vcsUrl = project.scmUrl
+        publicDownloadNumbers = true
+        version {
+            name = project.version
+            released = new Date()
+            vcsTag = project.version
+        }
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
