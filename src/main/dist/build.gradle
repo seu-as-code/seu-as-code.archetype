@@ -17,10 +17,6 @@ plugins {
 }
 
 apply plugin: 'base'
-apply plugin: 'de.qaware.seu.as.code.base'
-apply plugin: 'de.qaware.seu.as.code.credentials'
-apply plugin: 'de.qaware.seu.as.code.git'
-apply plugin: 'de.qaware.seu.as.code.svn'
 
 apply from: 'scripts/svn.gradle'
 apply from: 'scripts/git.gradle'
@@ -37,8 +33,8 @@ dependencies {
     seuac 'org.codehaus.groovy.modules.scriptom:scriptom:1.6.0'
     seuac 'com.h2database:h2:1.3.176'
 
-    software 'de.qaware.seu:seuac-base:1.6'
-    home 'de.qaware.seu:seuac-home:1.1'
+    software 'de.qaware.seu.as.code:seuac-software:1.8'
+    home 'de.qaware.seu.as.code:seuac-home:1.1'
 }
 
 seuAsCode {
