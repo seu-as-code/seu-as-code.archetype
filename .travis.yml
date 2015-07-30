@@ -9,5 +9,5 @@ before_install:
   - chmod +x gradlew
 
 script:
-  - gradlew clean
-  - gradlew distZip
+  - ./gradlew clean
+  - ./gradlew distZip
