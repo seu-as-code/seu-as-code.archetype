@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/seu-as-code/seu-as-code.archetype.svg)](https://travis-ci.org/seu-as-code/seu-as-code.archetype)
 [![Stories in Ready](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=ready&title=Ready)](https://waffle.io/seu-as-code/seu-as-code.archetype)
+[![Stories in Progress](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=in%20progress&title=In%20Progress)](https://waffle.io/seu-as-code/seu-as-code.archetype)
 
 # SEU-as-Code Archetype
 
