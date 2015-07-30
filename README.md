@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/seu-as-code/seu-as-code.archetype.svg)](https://travis-ci.org/seu-as-code/seu-as-code.archetype)
 [![Stories in Ready](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=ready&title=Ready)](https://waffle.io/seu-as-code/seu-as-code.archetype)
 
 # SEU-as-Code Archetype
@@ -18,15 +19,9 @@ or [GitHub](https://github.com/seu-as-code/seu-as-code.archetype/releases).
 2. Extract the archive to a custom location and rename the template project directory, e.g. `seubase`.
 
 3. Customize the `build.gradle` file. First you need to adjust the `ext` configuration section and set the
-`seuRoot` directory path and the `seuName` accordingly:
-```groovy
-ext {
-    seuRoot = 'T:'
-    seuName = 'SEU as Code Archetype'
-}
-```
-Next, adjust the `software` and `home` dependencies and add the package dependencies you require. For a complete list
-of packages have a look at the [SEU-as-Code Package](https://github.com/seu-as-code/seu-as-code.packages) repository.
+`seuRoot` directory path and the `seuName` accordingly. The adjust the `dependencies` configuration section and
+add the `software` or `home` package dependencies you require. For a complete list of packages have a look at the
+[SEU-as-Code Package](https://github.com/seu-as-code/seu-as-code.packages) repository.
 
 4. In case you want to use one of the SCM plugins you will have to customize the SVN or Git URLs in the `gradle.properties` file,
 as well as the included scripts.
