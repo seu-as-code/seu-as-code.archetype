@@ -51,7 +51,7 @@ bintray {
     publications = ['seaucArchetype']
     pkg {
         repo = project.bintrayRepo
-        name = 'seuac-archetype'
+        name = project.name
         desc = project.description
         licenses = ['Apache-2.0']
         labels = ['seu-as-code', 'archetype', 'template', 'quickstart']
@@ -62,8 +62,9 @@ bintray {
         publish = true
         version {
             name = project.version
+            desc = project.description
             released = new Date().format("yyyy-MM-dd'T'HH:mm:ss.SSSZZ")
-            vcsTag = project.version
+            vcsTag = "v${project.version}"
 
             mavenCentralSync {
                 sync = false
