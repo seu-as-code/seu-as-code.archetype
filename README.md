@@ -49,10 +49,10 @@ Directory name | Description
 *repo/* | Flat repository used for custom SEU specific software and home dependencies. Mainly used for additional customization.
 *scripts*/ | Contains addidional build script fragments that can be included in the main `build.script`. See the section on `Script customization` for further details.
 
-
-## Dependency Customization
+### Dependency Customization
 All software artifacts and packages you can install in your SEU are managed as ordinary dependencies. Most of these are
-located in the [Bintray Maven repository](https://bintray.com/seu-as-code/maven).
+located in the [Bintray Maven repository](https://bintray.com/seu-as-code/maven). For company internal dependencies it
+is recommended to use your own company wide repository server, such as Nexus.
 
 To determine where a software package will be installed we use Gradle configurations. Currently, the `seauc-base` plugin ships
 with three inbuilt configurations:
@@ -63,7 +63,7 @@ Configuration | Description
 *software* | The main configuration used for all packages that should be installed into the `software` directory specified by the SEU layout.
 *home* | The configuration used to install packages into the user `home` directory of the SEU.
 
-You use these configurations when you define your software dependencies on your SEU `build.gradle` file:
+You use these configurations when you define your software dependencies on your `build.gradle` file:
 ```groovy
 dependencies {
     // dependencies for the Groovy root classloader
@@ -84,11 +84,10 @@ You also have to option to create your own customized software packages and dist
 you want your own custom project banner when you start a Console windows, and you might also want to change the default
 JDK version. You can take the `de.qaware.seu.as.code:seuac-environment:2.0.0` JAR as a starting point for your own package.
 Once you have customized this package, give it a different name, create a ZIP file and put it into the `repo` directory of
-your SEU. Have a look at some of the [SEU-as-Code examples](https://github.com/seu-as-code/seu-as-code.examples).
+your SEU. Have a look at some of the [SEU-as-Code Examples](https://github.com/seu-as-code/seu-as-code.examples).
 
 You should refer to the official Gradle documentation for more information on handling dependencies:
 [Dependency Management Basics](http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html)
-
 
 ### Build Tasks
 Per default, the following plugins are applied to the SEU template build file: `base`, `seuac-base`, `seuac-svn`, `seuac-git`.
@@ -99,7 +98,6 @@ gradlew tasks
 ```
 You can add the `--all` command line parameter to see the complete list of all tasks, including non-public utility tasks.
 
-
 ### Graphical User Interface
 In addition to interacting with your SEU-as-Code project using the traditional command line interface, Gradle also offers
 a graphical user interface you can use:
@@ -107,7 +105,6 @@ a graphical user interface you can use:
 gradlew --gui
 ```
 Of course, you can also import the SEU project into your favourite IDE as a Gradle project.
-
 
 ### Script Customization
 You will probably extend the basic build script with additional functionality required by your project. You may need
@@ -118,7 +115,6 @@ files with a possible SVN repository configuration. You only need to include and
 ```groovy
 apply from: 'scripts/svn.gradle'
 ```
-
 
 ### Task Customization
 To customize your SEU even further you can write your own Gradle task definitions to copy files or do whatever you
@@ -137,6 +133,120 @@ helpful links on the topic:
 - [Gradle Build Language Reference](http://www.gradle.org/docs/current/dsl/)
 - [Gradle User Guide](http://www.gradle.org/docs/current/userguide/userguide.html)
 
+
+## Shell Scripting with SEU-as-Code
+
+The idea of SEU-as-Code is also about using a proper programming languages for your daily SEU automation instead of
+writing Bash or Windows shell scripts.
+
+### Basic Shell Scripting with Nashorn
+
+You can use the Nashorn JavaScript engine on the command line for your daily shell scripts. Make sure you have a
+Java8 SDK dependency declared in your SEU build file:
+```groovy
+dependencies {
+    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.0.0'
+    software 'net.java.jdk8:openjdk:1.8.0_45'
+}
+```
+
+Put your scripts into a directory that is accessible via your `$PATH` environment variable. Then you can use the
+shebang *(#!)* mechanism to call the script directly.
+```javascript
+#!/usr/bin/env jjs
+
+var seuAsCode = "SEU-as-Code (Nashorn)"
+print(seuAsCode)
+print("${Date()}")
+
+var name = readLine("What is your name? ")
+print("Hello, ${name}!")
+```
+
+### Basic Shell Scripting with Groovy
+
+Another option is to use Groovy for your daily shell scripts. Make sure you have a Groovy SDK dependency declared in
+your SEU build file:
+```groovy
+dependencies {
+    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
+    software 'org.groovy-lang:groovy:2.4.4'
+}
+```
+
+Put your scripts into a directory that is accessible via your `$PATH` environment variable. Then you can use the
+shebang *(#!)* mechanism to call the script directly.
+```groovy
+#!/usr/bin/env groovy
+
+def seuAsCode = "SEU as Code (Groovy Script)"
+println seuAsCode
+println "${new Date()}"
+
+def name = System.console().readLine 'What is your name? '
+println "Hello, ${name}!"
+```
+
+### Further reading
+* [Nashorn and Shell Scripting](https://docs.oracle.com/javase/8/docs/technotes/guides/scripting/nashorn/shell.html)
+* [Nashorn Syntax Extensions](https://wiki.openjdk.java.net/display/Nashorn/Nashorn+extensions)
+* [CSI: Nashorn - Shell Scripting in JavaScript, WAT?](https://blogs.oracle.com/nashorn/entry/csi_nashorn_shell_scripting_in)
+* [Running Groovy on the command line](http://groovy.codehaus.org/Running)
+* [invoking scripts using full path broken in cygwin](http://jira.codehaus.org/browse/GROOVY-7022)
+* [Groovy scripts no longer work under Cygwin?](http://stackoverflow.com/questions/24303057/groovy-scripts-no-longer-work-under-cygwin)
+
+
+## Best Practises and Recipies
+
+### Do not put credentials into gradle.properties
+Usually, you will need some sort of credentials to access your SVN or Git repositories or to authenticate against a
+company wide Nexus repository in order to download your software dependencies.
+
+**DO NOT PUT THESE INTO THE GRADLE.PROPERTIES FILE.**
+
+On way is to specify these on the command line using the `-P` project parameter. Make sure not to use a console that has a history though.
+Another option is to put credentials into `$USER_HOME/.gradle/gradle.properties`.
+In your `build.gradle` file you can then access the properties via the project:
+```groovy
+repositories {
+    maven {
+        url project.nexusUrl
+        credentials {
+            username = project.hasProperty('nexusUsername') ? project.nexusUsername : System.getProperty('user.name')
+            password = project.hasProperty('nexusPassword') ? project.nexusPassword : ''
+        }
+    }
+}
+```
+
+The recommend way of storing your credentials securely is to use the [SEU-as-Code Credentials Plugin](https://github.com/seu-as-code/seu-as-code.plugins/tree/master/seuac-credentials-plugin).
+Currently this plugin only works under Windows. In your `build.gradle` file you can then access the credentials as follows:
+```groovy
+repositories {
+    maven {
+        url project.nexusUrl
+        credentials {
+            username credentials.get('nexusUsername')
+            password credentials.get('nexusPassword')
+        }
+    }
+}
+```
+
+### Using Windows network drives
+
+Sometimes your may need to mount and use Windows or SMB shares. The following Gradle tasks might be helpful. they mount or unmount a given share name:
+```groovy
+task mountShare(type: Exec, group: 'Network shares', description: 'Mount the network share') {
+    commandLine 'cmd', '/c', 'net', 'use', 'X:', '\\\\server\\share', "$password", "/USER:$username", '/persistent:no'
+    standardInput System.in
+}
+
+task unmountShare(type: Exec, group: 'Network shares', description: 'Unmount the network share') {
+    commandLine 'cmd', '/c', 'net', 'use', 'X:', '/DELETE'
+}
+```
 
 ## Building
 
