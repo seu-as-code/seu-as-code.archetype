@@ -25,6 +25,19 @@ or [GitHub](https://github.com/seu-as-code/seu-as-code.archetype/releases).
 `seuRoot` directory path and the `seuName` accordingly. The adjust the `dependencies` configuration section and
 add the `software` or `home` package dependencies you require. For a complete list of packages have a look at the
 [SEU-as-Code Package](https://github.com/seu-as-code/seu-as-code.packages) repository.
+```groovy
+ext {
+    seuRoot = 'T:'
+    seuName = 'SEU as Code Template'
+}
+dependencies {
+    seuac 'org.codehaus.groovy.modules.scriptom:scriptom:1.6.0'
+    seuac 'com.h2database:h2:1.3.176'
+
+    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.0.0:jdk8'
+}
+```
 
 4. In case you want to use one of the SCM plugins you will have to customize the SVN or Git URLs in the `gradle.properties` file,
 as well as the included scripts.
