@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/seu-as-code/seu-as-code.archetype.svg)](https://travis-ci.org/seu-as-code/seu-as-code.archetype)
+[![Download](https://api.bintray.com/packages/seu-as-code/generic/seuac-archetype/images/download.svg) ](https://bintray.com/seu-as-code/generic/seuac-archetype/_latestVersion)
 [![Stories in Ready](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=ready&title=Ready)](https://waffle.io/seu-as-code/seu-as-code.archetype)
 [![Stories in Progress](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=in%20progress&title=In%20Progress)](https://waffle.io/seu-as-code/seu-as-code.archetype)
 [![Apache License 2](http://img.shields.io/badge/license-ASF2-blue.svg)](https://github.com/seu-as-code/seu-as-code.archetype/blob/master/LICENSE)
@@ -16,7 +17,7 @@ reflect the latest changes and enhancements.
 
 So you decided to build your next SEU for a new project as code. **Excellent choice!**
  
-1. Download the latest SEU-as-Code Archetype distribution from either [Bintray](https://dl.bintray.com/seu-as-code/generic)
+1. Download the latest SEU-as-Code Archetype distribution from either [Bintray](https://bintray.com/seu-as-code/generic/seuac-archetype/_latestVersion)
 or [GitHub](https://github.com/seu-as-code/seu-as-code.archetype/releases).
 
 2. Extract the archive to a custom location and rename the template project directory, e.g. `seubase`.
@@ -33,7 +34,7 @@ as well as the included scripts.
 
 6. Finally, open a console and issue the following command to create the SEU: `gradlew bootstrapSeu`.
 
-For a more detailed description on how to further customize the build file please the [documentation](https://seu-as-code.github.io/).
+For a more detailed description on how to further customize the build file please see the [documentation](https://seu-as-code.github.io/).
 
 ## Developing with SEU-as-Code
 
@@ -137,7 +138,7 @@ helpful links on the topic:
 - [Gradle User Guide](http://www.gradle.org/docs/current/userguide/userguide.html)
 
 
-## Building the SEU-as-Code Archetype
+## Building
 
 To build the archetype archive all you have to do is to issue the following command:
 ```groovy
