@@ -35,7 +35,7 @@ dependencies {
     seuac 'com.h2database:h2:1.3.176'
 
     home 'de.qaware.seu.as.code:seuac-home:2.0.0'
-    software 'de.qaware.seu.as.code:seuac-environment:2.0.0:jdk8'
+    software 'de.qaware.seu.as.code:seuac-environment:2.0.0'
 
     // software 'org.apache.ant:apache-ant:1.9.4'
     // software 'org.apache.maven:apache-maven:3.3.3'

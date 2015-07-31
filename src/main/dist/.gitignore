@@ -1,0 +1,9 @@
+.idea/
+.gradle/
+build/
+*.iml
+seuac.h2.db
+seuac.lock.db
+gradle/wrapper/dists/
+gradle/caches/
+gradle/native/
