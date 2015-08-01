@@ -5,16 +5,16 @@
  *        /____//_____/ \____/   \__,_//____/   \____/ \____/ \__,_/ \___/
  */
 
+plugins {
+    id 'de.qaware.seu.as.code.base' version '2.0.0'
+    id 'de.qaware.seu.as.code.credentials' version '2.0.0'
+    id 'de.qaware.seu.as.code.git' version '2.0.0'
+    id 'de.qaware.seu.as.code.svn' version '2.0.0'
+}
+
 ext {
     seuRoot = 'T:'
     seuName = 'SEU as Code Template'
-}
-
-plugins {
-    id 'de.qaware.seu.as.code.base' version '2.1.0'
-    id 'de.qaware.seu.as.code.credentials' version '2.0.0'
-    id 'de.qaware.seu.as.code.git' version '2.1.1'
-    id 'de.qaware.seu.as.code.svn' version '2.1.2'
 }
 
 apply from: 'scripts/svn.gradle'
