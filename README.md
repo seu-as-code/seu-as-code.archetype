@@ -147,7 +147,7 @@ Java8 SDK dependency declared in your SEU build file:
 dependencies {
     home 'de.qaware.seu.as.code:seuac-home:2.0.0'
     software 'de.qaware.seu.as.code:seuac-environment:2.0.0'
-    software 'net.java.jdk8:openjdk:1.8.0_45'
+    software 'net.java:openjdk8:8u40'
 }
 ```
 
