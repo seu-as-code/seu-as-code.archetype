@@ -4,12 +4,12 @@
 [![Stories in Progress](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=in%20progress&title=In%20Progress)](https://waffle.io/seu-as-code/seu-as-code.archetype)
 [![Apache License 2](http://img.shields.io/badge/license-ASF2-blue.svg)](https://github.com/seu-as-code/seu-as-code.archetype/blob/master/LICENSE)
 
-# SEU-as-Code Archetype
+# SEU-as-code Archetype
 
   * SEU: German for software development environment (Software Entwicklungs-Umgebung)
-  * as Code: to be able to configure, build and program the SEU as source code
+  * as-code: to be able to configure, build and program the SEU as source code
   
-The SEU-as-Code archetype is a quickstart template for new projects. The archetype is continuously evolved to
+The SEU-as-code archetype is a quickstart template for new projects. The archetype is continuously evolved to
 reflect the latest changes and enhancements.
 
 ## Quickstart
@@ -35,10 +35,10 @@ as well as the included scripts.
 
 For a more detailed description on how to further customize the build file please see the [documentation](https://seu-as-code.github.io/).
 
-## Developing with SEU-as-Code
+## Developing with SEU-as-code
 
 ### Project Layout
-The default SEU-as-Code project comes with a predefined project layout. In essence, it is nothing more than a Gradle project.
+The default SEU-as-code project comes with a predefined project layout. In essence, it is nothing more than a Gradle project.
 The project contains a `build.gradle` file and brings it's own Gradle wrapper. Additionally, there are the following directories:
 
 Directory name | Description
@@ -83,7 +83,7 @@ You also have to option to create your own customized software packages and dist
 you want your own custom project banner when you start a Console windows, and you might also want to change the default
 JDK version. You can take the `de.qaware.seu.as.code:seuac-environment:2.0.0` JAR as a starting point for your own package.
 Once you have customized this package, give it a different name, create a ZIP file and put it into the `repo` directory of
-your SEU. Have a look at some of the [SEU-as-Code Examples](https://github.com/seu-as-code/seu-as-code.examples).
+your SEU. Have a look at some of the [SEU-as-code Examples](https://github.com/seu-as-code/seu-as-code.examples).
 
 You should refer to the official Gradle documentation for more information on handling dependencies:
 [Dependency Management Basics](http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html)
@@ -98,7 +98,7 @@ gradlew tasks
 You can add the `--all` command line parameter to see the complete list of all tasks, including non-public utility tasks.
 
 ### Graphical User Interface
-In addition to interacting with your SEU-as-Code project using the traditional command line interface, Gradle also offers
+In addition to interacting with your SEU-as-code project using the traditional command line interface, Gradle also offers
 a graphical user interface you can use:
 ```groovy
 gradlew --gui
@@ -133,9 +133,9 @@ helpful links on the topic:
 - [Gradle User Guide](http://www.gradle.org/docs/current/userguide/userguide.html)
 
 
-## Shell Scripting with SEU-as-Code
+## Shell Scripting with SEU-as-code
 
-The idea of SEU-as-Code is also about using a proper programming languages for your daily SEU automation instead of
+The idea of SEU-as-code is also about using a proper programming languages for your daily SEU automation instead of
 writing Bash or Windows shell scripts.
 
 ### Basic Shell Scripting with Nashorn
@@ -155,7 +155,7 @@ shebang *(#!)* mechanism to call the script directly.
 ```javascript
 #!/usr/bin/env jjs
 
-var seuAsCode = "SEU-as-Code (Nashorn)"
+var seuAsCode = "SEU-as-code (Nashorn)"
 print(seuAsCode)
 print("${Date()}")
 
@@ -179,7 +179,7 @@ shebang *(#!)* mechanism to call the script directly.
 ```groovy
 #!/usr/bin/env groovy
 
-def seuAsCode = "SEU as Code (Groovy Script)"
+def seuAsCode = "SEU-as-code (Groovy Script)"
 println seuAsCode
 println "${new Date()}"
 
@@ -219,7 +219,7 @@ repositories {
 }
 ```
 
-The recommend way of storing your credentials securely is to use the [SEU-as-Code Credentials Plugin](https://github.com/seu-as-code/seu-as-code.plugins/tree/master/seuac-credentials-plugin).
+The recommend way of storing your credentials securely is to use the [SEU-as-code Credentials Plugin](https://github.com/seu-as-code/seu-as-code.plugins/tree/master/seuac-credentials-plugin).
 Currently this plugin only works under Windows. In your `build.gradle` file you can then access the credentials as follows:
 ```groovy
 repositories {
@@ -258,7 +258,7 @@ To build the archetype archive all you have to do is to issue the following comm
 ## Contributing
 
 Is there anything missing? Do you have ideas for new features or improvements? You are highly welcome to contribute
-your improvements to the SEU-as-Code projects. All you have to do is to fork this repository, improve the code and 
+your improvements to the SEU-as-code projects. All you have to do is to fork this repository, improve the code and 
 issue a pull request.
 
 
