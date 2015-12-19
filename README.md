@@ -16,7 +16,7 @@ reflect the latest changes and enhancements.
 
 So you decided to build your next SEU for a new project as code. **Excellent choice!**
  
-1. Download the latest SEU-as-Code Archetype distribution from either [Bintray](https://bintray.com/seu-as-code/generic/seuac-archetype/_latestVersion)
+1. Download the latest SEU-as-code Archetype distribution from either [Bintray](https://bintray.com/seu-as-code/generic/seuac-archetype/_latestVersion)
 or [GitHub](https://github.com/seu-as-code/seu-as-code.archetype/releases).
 
 2. Extract the archive to a custom location and rename the template project directory, e.g. `seubase`.
@@ -24,14 +24,11 @@ or [GitHub](https://github.com/seu-as-code/seu-as-code.archetype/releases).
 3. Customize the `build.gradle` file. First you need to adjust the `ext` configuration section and set the
 `seuRoot` directory path and the `seuName` accordingly. The adjust the `dependencies` configuration section and
 add the `software` or `home` package dependencies you require. For a complete list of packages have a look at the
-[SEU-as-Code Package](https://github.com/seu-as-code/seu-as-code.packages) repository.
+[SEU-as-code Package](https://github.com/seu-as-code/seu-as-code.packages) repository.
 
-4. In case you want to use one of the SCM plugins you will have to customize the SVN or Git URLs in the `gradle.properties` file,
-as well as the included scripts.
+4. At this point you should add your SEU project to a version control system of your choice.
 
-5. At this point you should add your SEU project to a version control system of your choice.
-
-6. Finally, open a console and issue the following command to create the SEU: `gradlew bootstrapSeu`.
+5. Finally, open a console and issue the following command to create the SEU: `gradlew bootstrapSeu`.
 
 For a more detailed description on how to further customize the build file please see the [documentation](https://seu-as-code.github.io/).
 
