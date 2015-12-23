@@ -223,8 +223,8 @@ repositories {
     maven {
         url project.nexusUrl
         credentials {
-            username credentials.get('nexusUsername')
-            password credentials.get('nexusPassword')
+            username project.credentials.get('nexusUsername')
+            password project.credentials.get('nexusPassword')
         }
     }
 }
