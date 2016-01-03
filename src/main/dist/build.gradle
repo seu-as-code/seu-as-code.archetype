@@ -6,10 +6,10 @@
  */
 
 plugins {
-    id 'de.qaware.seu.as.code.base' version '2.1.0'
-    id 'de.qaware.seu.as.code.credentials' version '2.0.0'
-    id 'de.qaware.seu.as.code.git' version '2.1.0'
-    id 'de.qaware.seu.as.code.svn' version '2.1.0'
+    id 'de.qaware.seu.as.code.base' version '2.1.1'
+    id 'de.qaware.seu.as.code.credentials' version '2.0.1'
+    id 'de.qaware.seu.as.code.git' version '2.2.0'
+    id 'de.qaware.seu.as.code.svn' version '2.1.1'
 }
 
 ext {
@@ -21,11 +21,10 @@ apply from: 'scripts/svn.gradle'
 apply from: 'scripts/git.gradle'
 
 repositories {
-	mavenCentral()    
-    flatDir { dirs 'repo' }    
-	maven { 
-		url 'https://dl.bintray.com/seu-as-code/maven'
-	}
+    flatDir { dirs 'repo' }
+  	maven {
+  		url 'https://dl.bintray.com/seu-as-code/maven'
+  	}
 }
 
 dependencies {
@@ -52,5 +51,5 @@ seuAsCode {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.4'
+    gradleVersion = '2.9'
 }
