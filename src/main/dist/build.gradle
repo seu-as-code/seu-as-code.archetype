@@ -25,6 +25,7 @@ repositories {
   	maven {
   		url 'https://dl.bintray.com/seu-as-code/maven'
   	}
+    jcenter()
 }
 
 dependencies {
