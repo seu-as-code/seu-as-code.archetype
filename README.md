@@ -118,7 +118,7 @@ need your SEU to do. The good thing is that you have the full Groovy power at yo
 inbuilt Gradle tasks and plugins to help you with this. A simple hello task might look like this:
 ```groovy
 task helloSeu << {
-    println 'Hello SEU-as-Code!'
+    println 'Hello SEU-as-code!'
 }
 ```
 
