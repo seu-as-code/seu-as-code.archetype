@@ -66,8 +66,7 @@ APP_HOME="`pwd -P`"
 cd "$SAVED" >&-
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
-JAVA_OPTS=-Djava.library.path="$APP_HOME/native"
-export GRADLE_USER_HOME=$APP_HOME/gradle
+JAVA_OPTS=-Djava.library.path=./native
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then

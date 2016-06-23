@@ -22,10 +22,10 @@ apply from: 'scripts/git.gradle'
 
 repositories {
     flatDir { dirs 'repo' }
+    mavenCentral()
   	maven {
   		url 'https://dl.bintray.com/seu-as-code/maven'
   	}
-    jcenter()
 }
 
 dependencies {
@@ -52,5 +52,5 @@ seuAsCode {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.12'
+    gradleVersion = '2.13'
 }

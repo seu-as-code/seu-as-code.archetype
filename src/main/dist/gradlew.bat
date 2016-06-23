@@ -70,8 +70,7 @@ set CMD_LINE_ARGS=%$
 @rem Setup the command line
 
 set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
-set JAVA_OPTS=-Djava.library.path="%APP_HOME%\native"
-set GRADLE_USER_HOME=%APP_HOME%\gradle
+set JAVA_OPTS=-Djava.library.path=./native
 
 @rem Execute Gradle
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
