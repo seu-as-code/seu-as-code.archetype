@@ -32,8 +32,14 @@ dependencies {
     seuac 'org.codehaus.groovy.modules.scriptom:scriptom:1.6.0'
     seuac 'com.h2database:h2:1.4.188'
 
-    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
-    software 'de.qaware.seu.as.code:seuac-environment:2.0.0'
+    home 'de.qaware.seu.as.code:seuac-home:2.1.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.2.3'
+
+    // software 'de.qaware.seu.as.code:seuac-environment:2.2.3:jdk7'
+    // software 'net.java:openjdk7:7u75'
+
+    // software 'de.qaware.seu.as.code:seuac-environment:2.2.3:jdk8'
+    // software 'net.java:openjdk8:8u40'
 
     // software 'org.apache.ant:apache-ant:1.9.4'
     // software 'org.apache.maven:apache-maven:3.3.3'

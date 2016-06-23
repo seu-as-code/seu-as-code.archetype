@@ -67,8 +67,8 @@ dependencies {
     seuac 'com.h2database:h2:1.4.188'
 
     // mandatory dependencies for basic SEU setup
-    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
-    software 'de.qaware.seu.as.code:seuac-environment:2.0.0:jdk8'
+    home 'de.qaware.seu.as.code:seuac-home:2.1.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.2.3:jdk8'
 
     // additional dependencies for a Groovy development environment
     software 'org.gradle:gradle:2.5'
@@ -141,8 +141,8 @@ You can use the Nashorn JavaScript engine on the command line for your daily she
 Java8 SDK dependency declared in your SEU build file:
 ```groovy
 dependencies {
-    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
-    software 'de.qaware.seu.as.code:seuac-environment:2.0.0'
+    home 'de.qaware.seu.as.code:seuac-home:2.1.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.2.3'
     software 'net.java:openjdk8:8u40'
 }
 ```
@@ -166,7 +166,7 @@ Another option is to use Groovy for your daily shell scripts. Make sure you have
 your SEU build file:
 ```groovy
 dependencies {
-    home 'de.qaware.seu.as.code:seuac-home:2.0.0'
+    home 'de.qaware.seu.as.code:seuac-home:2.1.0'
     software 'org.groovy-lang:groovy:2.4.4'
 }
 ```

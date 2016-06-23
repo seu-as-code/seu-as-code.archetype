@@ -16,7 +16,7 @@ deploy:
   provider: releases
   api_key:
     secure: ugQ0JvybZaXvYjl+CteOpvZZqtVhV/nR5M3tYmvG9sRsDMLlop26yKpVCIwYHasVaULdvtaMmai3OWnQIm63xYdu58x4zR4S0IiZsI9WQpdgwmTXNK8jZVTpCEqBXcoL9UyoZy2BkoqcT9MVX8OgQwEpIoYvmZNXk68nDqeMSNwJiGoqUKPo388sEndzsRqbnw+QOCe46EmkcIJUW/PYJHUPvjihdzeqAM1TZyh0s0+YNHxBeoyaJzXlbhWHLAg+jZQD9Fr3I6RBtakZ1jW1BTREeQy/LM0/YLuPGzRZf5UqWJj24zY9EkeXchzYx0MqC7FZDVjMNF1dEGaTY0rA5g0oU2HeDpc5RB7sYut0ub6KO13BG2I+LVlQHqODOa56yOFwfH+1Sc4uNHj4OqmQqnANwcVU5axPU8hI4W4YU9HiQpRikz9bhUgaG4fNQLHHKj08g++YxLSs1DZYj7fHYsKRvOEvHInpPuOId7xHUekazX2wC0MdEAp0bnjsUeBptCdZPBHUHumHqn66sY5/TbiuFVadsO9tKArYS8pRLcTTq969lG7Ow1g8oLzflBxpI2nBjYIyxuROlgPEA9163z21/bbYm+8oJ/RTHlVuAsHXc0z44FKF5UtsI49wOFSkoZQPXt0do04OtPorEWh1tm6SPXuAe3Bz6yHTcnRFvHE=
-  file: ./build/distributions/seuac-archetype-2.2.2.zip
+  file: ./build/distributions/seuac-archetype-2.2.3.zip
   skip_cleanup: true
   on:
     tags: true
