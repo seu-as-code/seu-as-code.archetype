@@ -6,8 +6,8 @@
  */
 
 plugins {
-    id 'de.qaware.seu.as.code.base' version '2.2.0'
-    id 'de.qaware.seu.as.code.credentials' version '2.2.0'
+    id 'de.qaware.seu.as.code.base' version '2.3.0'
+    id 'de.qaware.seu.as.code.credentials' version '2.3.0'
     id 'de.qaware.seu.as.code.git' version '2.2.0'
     id 'de.qaware.seu.as.code.svn' version '2.1.1'
 }
@@ -33,7 +33,7 @@ dependencies {
     seuac 'com.h2database:h2:1.4.188'
 
     home 'de.qaware.seu.as.code:seuac-home:2.1.0'
-    software 'de.qaware.seu.as.code:seuac-environment:2.2.3'
+    software 'de.qaware.seu.as.code:seuac-environment:2.3.0'
 
     // software 'de.qaware.seu.as.code:seuac-environment:2.2.3:jdk7'
     // software 'net.java:openjdk7:7u75'
@@ -58,5 +58,5 @@ seuAsCode {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.13'
+    gradleVersion = '2.14'
 }
