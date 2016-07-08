@@ -22,34 +22,36 @@ apply from: 'scripts/git.gradle'
 
 repositories {
     flatDir { dirs 'repo' }
-    mavenCentral()
   	maven {
   		url 'https://dl.bintray.com/seu-as-code/maven'
   	}
+    jcenter()
 }
 
 dependencies {
     seuac 'org.codehaus.groovy.modules.scriptom:scriptom:1.6.0'
     seuac 'com.h2database:h2:1.4.188'
 
-    home 'de.qaware.seu.as.code:seuac-home:2.1.0'
+    home 'de.qaware.seu.as.code:seuac-home:2.3.0'
     software 'de.qaware.seu.as.code:seuac-environment:2.3.0'
 
+    // use this for OS specific environment package
+    // software 'de.qaware.seu.as.code:seuac-environment:2.3.0:$osClassifier'
+
+    // use this for JDK7 specific multi-platform environment
     // software 'de.qaware.seu.as.code:seuac-environment:2.2.3:jdk7'
     // software 'net.java:openjdk7:7u75'
 
+    // use this for JDK8 specific multi-platform environment
     // software 'de.qaware.seu.as.code:seuac-environment:2.2.3:jdk8'
     // software 'net.java:openjdk8:8u40'
 
-    // software 'org.apache.ant:apache-ant:1.9.4'
-    // software 'org.apache.maven:apache-maven:3.3.3'
-    // software 'org.apache.tomcat:apache-tomcat8:8.0.24'
     // software 'io.github.msysgit:git:1.9.5'
-    // software 'org.gradle:gradle:2.5'
+    // software 'org.gradle:gradle:2.14'
     // software 'org.groovy-lang:groovy:2.4.4'
+    // software 'org.apache.maven:apache-maven:3.3.9'
     // software 'org.jruby:jruby:1.7.21'
     // software 'org.scala-lang:scala:2.11.7'
-
 }
 
 seuAsCode {

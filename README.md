@@ -8,14 +8,14 @@
 
   * SEU: German for software development environment (Software Entwicklungs-Umgebung)
   * as-code: to be able to configure, build and program the SEU as source code
-  
+
 The SEU-as-code archetype is a quickstart template for new projects. The archetype is continuously evolved to
 reflect the latest changes and enhancements.
 
 ## Quickstart
 
 So you decided to build your next SEU for a new project as code. **Excellent choice!**
- 
+
 1. Download the latest SEU-as-code Archetype distribution from either [Bintray](https://bintray.com/seu-as-code/generic/seuac-archetype/_latestVersion)
 or [GitHub](https://github.com/seu-as-code/seu-as-code.archetype/releases).
 
@@ -67,18 +67,18 @@ dependencies {
     seuac 'com.h2database:h2:1.4.188'
 
     // mandatory dependencies for basic SEU setup
-    home 'de.qaware.seu.as.code:seuac-home:2.1.0'
-    software 'de.qaware.seu.as.code:seuac-environment:2.2.3:jdk8'
+    home 'de.qaware.seu.as.code:seuac-home:2.3.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.3.0:jdk8'
 
     // additional dependencies for a Groovy development environment
-    software 'org.gradle:gradle:2.5'
+    software 'org.gradle:gradle:2.14'
     software 'org.groovy-lang:groovy:2.4.4'
 }
 ```
 
 You also have to option to create your own customized software packages and distribute these along with your SEU. Usually
 you want your own custom project banner when you start a Console windows, and you might also want to change the default
-JDK version. You can take the `de.qaware.seu.as.code:seuac-environment:2.0.0` JAR as a starting point for your own package.
+JDK version. You can take the `de.qaware.seu.as.code:seuac-environment:2.3.0` JAR as a starting point for your own package.
 Once you have customized this package, give it a different name, create a ZIP file and put it into the `repo` directory of
 your SEU. Have a look at some of the [SEU-as-code Examples](https://github.com/seu-as-code/seu-as-code.examples).
 
@@ -141,8 +141,8 @@ You can use the Nashorn JavaScript engine on the command line for your daily she
 Java8 SDK dependency declared in your SEU build file:
 ```groovy
 dependencies {
-    home 'de.qaware.seu.as.code:seuac-home:2.1.0'
-    software 'de.qaware.seu.as.code:seuac-environment:2.2.3'
+    home 'de.qaware.seu.as.code:seuac-home:2.3.0'
+    software 'de.qaware.seu.as.code:seuac-environment:2.3.0:jdk8'
     software 'net.java:openjdk8:8u40'
 }
 ```
@@ -255,7 +255,7 @@ To build the archetype archive all you have to do is to issue the following comm
 ## Contributing
 
 Is there anything missing? Do you have ideas for new features or improvements? You are highly welcome to contribute
-your improvements to the SEU-as-code projects. All you have to do is to fork this repository, improve the code and 
+your improvements to the SEU-as-code projects. All you have to do is to fork this repository, improve the code and
 issue a pull request.
 
 
