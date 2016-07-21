@@ -6,14 +6,16 @@
  */
 
 plugins {
-    id 'de.qaware.seu.as.code.base' version '2.3.0'
+    id 'de.qaware.seu.as.code.base' version '2.4.0'
     id 'de.qaware.seu.as.code.credentials' version '2.3.0'
     id 'de.qaware.seu.as.code.git' version '2.2.0'
     id 'de.qaware.seu.as.code.svn' version '2.1.1'
 }
 
+import static de.qaware.seu.as.code.plugins.base.Platform.isWindows
+
 ext {
-    seuRoot = 'T:'
+    seuRoot = isWindows() ? 'T:' : '/Volumes/Template-SEU'
     seuName = 'SEU-as-code Template'
 }
 
