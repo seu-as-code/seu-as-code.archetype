@@ -254,9 +254,8 @@ To build the archetype archive all you have to do is to issue the following comm
 
 ## Contributing
 
-Is there anything missing? Do you have ideas for new features or improvements? You are highly welcome to contribute
-your improvements to the SEU-as-code projects. All you have to do is to fork this repository, improve the code and
-issue a pull request.
+Is there anything missing? Do you have ideas for new features or improvements? You are highly welcome to contribute your improvements to the SEU-as-code projects. All you have to do is to fork this repository, improve the code and issue a pull request. Make sure
+you also read the [Contribution Guide](CONTRIBUTING.md).
 
 
 ## Maintainer
