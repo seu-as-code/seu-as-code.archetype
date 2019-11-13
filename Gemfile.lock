@@ -10,7 +10,8 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
-    ffi (1.9.10-x64-mingw32)
+    ffi (1.11.2)
+    ffi (1.11.2-x64-mingw32)
     gh (0.14.0)
       addressable
       backports
@@ -51,6 +52,7 @@ GEM
     websocket (1.2.2)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
