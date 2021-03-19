@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.org/seu-as-code/seu-as-code.archetype.svg)](https://travis-ci.org/seu-as-code/seu-as-code.archetype)
 [![Download](https://api.bintray.com/packages/seu-as-code/generic/seuac-archetype/images/download.svg) ](https://bintray.com/seu-as-code/generic/seuac-archetype/_latestVersion)
-[![Stories in Ready](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=ready&title=Ready)](https://waffle.io/seu-as-code/seu-as-code.archetype)
-[![Stories in Progress](https://badge.waffle.io/seu-as-code/seu-as-code.archetype.png?label=in%20progress&title=In%20Progress)](https://waffle.io/seu-as-code/seu-as-code.archetype)
 [![Apache License 2](http://img.shields.io/badge/license-ASF2-blue.svg)](https://github.com/seu-as-code/seu-as-code.archetype/blob/master/LICENSE)
 
 # SEU-as-code Archetype
