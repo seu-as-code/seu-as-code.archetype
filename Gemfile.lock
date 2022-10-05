@@ -1,7 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.8)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     backports (3.6.6)
     coderay (1.1.0)
     ethon (0.7.4)
@@ -10,6 +11,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.10.0)
       faraday (>= 0.7.4, < 0.10)
+    ffi (1.9.10)
     ffi (1.9.10-x64-mingw32)
     gh (0.14.0)
       addressable
@@ -31,6 +33,7 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    public_suffix (5.0.0)
     pusher-client (0.6.2)
       json
       websocket (~> 1.0)
@@ -51,6 +54,7 @@ GEM
     websocket (1.2.2)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
